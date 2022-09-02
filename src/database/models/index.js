@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 /**
  * Este arquivo não é utilizado diretamente na
  * aplicação mas dá suporte aos models. Ele cria

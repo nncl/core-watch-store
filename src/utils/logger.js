@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 import { createLogger, transports, config, format } from 'winston';
 
 const { combine, timestamp, json } = format;
