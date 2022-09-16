@@ -1,6 +1,7 @@
 import * as validator from 'express-validator';
 import { appError } from '@/utils';
 import userStub from 'test/stubs/user.json';
+import usersStub from 'test/stubs/users.json';
 import orderStub from 'test/stubs/order.json';
 import ordersStub from 'test/stubs/orders.json';
 
@@ -45,6 +46,10 @@ export function buildValidationErrors(condition) {
 
 export function buildUser() {
   return userStub;
+}
+
+export function buildUsers() {
+  return usersStub;
 }
 
 export function buildOrder() {
