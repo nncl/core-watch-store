@@ -5,9 +5,14 @@ import usersStub from 'test/stubs/users.json';
 import orderStub from 'test/stubs/order.json';
 import ordersStub from 'test/stubs/orders.json';
 
+import * as service from '@/database/service/orders.service';
+
+jest.mock('@/database/service');
+
 export function buildReq({ user = buildUser(), ...overrides } = {}) {
   const req = {
     user,
+    service,
     headers: { email: user.email },
     body: {},
     params: {},
