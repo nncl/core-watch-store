@@ -4,6 +4,7 @@ import logger from 'morgan';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import { logger as appLogger } from '@/utils/logger';
 import { attachRouters } from '@/routes';
 
 const app = express();
@@ -23,6 +24,7 @@ attachRouters(app);
  * é um local centralizado para o gerenciamento de erros.
  */
 app.use((error, req, res, next) => {
+  appLogger.error(error.stack);
   res.status(error.status).json({ message: error.message });
 });
 
