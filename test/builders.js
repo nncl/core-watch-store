@@ -5,7 +5,7 @@ import usersStub from 'test/stubs/users.json';
 import orderStub from 'test/stubs/order.json';
 import ordersStub from 'test/stubs/orders.json';
 
-import * as service from '@/database/service/orders.service';
+import * as service from '@/database/service';
 
 jest.mock('@/database/service');
 
